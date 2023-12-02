@@ -1,4 +1,4 @@
-from scrapping import Scrapping
+from main_scrapping import Scrapping
 from tkinter import messagebox
 from ttkbootstrap.constants import *
 import ttkbootstrap as tb
@@ -53,7 +53,7 @@ label_ano = tb.Label(text='ANO:',
                               bootstyle=(INFO))
 label_ano.place(x=28,
                 y=170)
-anos = ['1º Ano', '2º Ano', '3º Ano']
+anos = ['1ª Série', '2ª Série', '3ª Série']
 
 combo = tb.Combobox(root,
                     bootstyle=LIGHT,
