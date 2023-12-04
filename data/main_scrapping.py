@@ -30,19 +30,19 @@ def Scrapping(login, senha, ano):
             DRIVER.find_element(By.XPATH, INPUTS[ano]).click()
 
     DRIVER.find_element(By.ID, 'btnConfirmar').click()
-    sleep(3)
+    sleep(4)
     DRIVER.find_element(By.XPATH, '/html/body/div[2]/div[2]/div/div/div[2]/div/div/totvs-page/div/div[3]/div/div/div/div/ul/li[2]/a').click()
     
     ITINERÁRIO = DRIVER.find_element(By.CSS_SELECTOR, '#menu-header-items > ul > li:nth-child(4) > span').text
-
-    if 'Profissional' in ITINERÁRIO:
-        sleep(2)
-        Scrapping_Omega(DRIVER)
-    elif 'Novo' in ITINERÁRIO:
-        sleep(2)
+    
+    if 'Novo' in ITINERÁRIO:
+        sleep(3)
         Scrapping_Alfa(DRIVER)
-
+    else:
+        sleep(3)
+        Scrapping_Omega(DRIVER)
     sleep(5)
 
 if __name__ == '__main__':
-    Scrapping('0000470798', 'Em103796@', '2ª Série')
+    #Scrapping('0000470798', 'Em103796@', '2ª Série')
+    Scrapping('00841012', 'LUIZIN091', '2ª Série')
